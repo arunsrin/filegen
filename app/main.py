@@ -11,10 +11,10 @@ Instrumentator().instrument(app).expose(app)
 
 WELCOME_MESSAGE = '''
 Usage:
-  curl https://filegen.arunsr.in/size/1
+  curl https://filegen.arunsr.in/size/1 > /dev/null
       <- returns a 1mb file
 
-  curl https://filegen.arunsr.in/size/10
+  curl https://filegen.arunsr.in/size/10 > /dev/null
       <- returns a 10mb file
 '''
 

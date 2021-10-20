@@ -1,0 +1,18 @@
+Description=Filegen systemd service.
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/filegen/.venv/bin/uvicorn app.main:app --port 443 --host 0.0.0.0 --ssl-keyfile=/etc/letsencrypt/live/filegen.arunsr.in/privkey.pem --ssl-certfile=/etc/letsencrypt/live/filegen.arunsr.in/fullchain.pem
+User=root
+RuntimeDirectory=/home/ubuntu/filegen
+WorkingDirectory=/home/ubuntu/filegen
+ExecReload=/bin/kill -s HUP 
+TimeoutStopSec=5
+PrivateTmp=true
+RestartSec=1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -10,8 +10,8 @@ generate and send a large-ish file to the user
 # Usage
 
 ```sh
-curl localhost:8000/size/1
+curl localhost:8000/size/1 > /dev/null
   <- returns a 1mb file
-curl localhost:8000/size/10
+curl localhost:8000/size/10 > /dev/null
   <- returns a 10mb file
 ```
