@@ -1,5 +1,8 @@
 # filegen
-generate and send a large-ish file to the user
+
+Generate and send a large-ish file to the user. A simple way to speed-test.
+
+Currently hosted @ https://filegen.arunsr.in
 
 # Setup and run
 
