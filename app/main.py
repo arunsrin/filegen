@@ -18,12 +18,12 @@ Usage:
       <- returns a 10mb file
 '''
 
+BIG_STRING = 'a'*1000*1000 + '\n\n'
+
 
 def smallchunk():
     '''Generate a long string of a's'''
-    res = 'a'*1000*1000
-    res += '\n\n'
-    return res
+    return BIG_STRING
 
 
 async def textgen3(size=3):
